@@ -6,6 +6,6 @@ Cucumber con Junit,
 Cucumber con serenity
 
 Usando diferentes patrones de diseño com:
-POM
-PageFactory
+POM,
+PageFactory,
 ScreenPlay
