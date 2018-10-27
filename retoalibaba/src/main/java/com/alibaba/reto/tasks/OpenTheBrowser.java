@@ -22,7 +22,9 @@ public class OpenTheBrowser implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
+		//abre navegador en la pagina especificada
 		actor.attemptsTo(Open.browserOn(page));
+		//verifica que la pagina haya cargado correctamente
 		actor.should(seeThat(AlibabaFailLoadPage.displayed(),hasItem("Alibaba.com")).orComplainWith(FailLoadHomePageExceptions.class,FailLoadHomePageExceptions.LOADPAGE_FAIL));
 		
 	}

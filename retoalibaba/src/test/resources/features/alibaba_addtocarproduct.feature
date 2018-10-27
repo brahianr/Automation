@@ -13,4 +13,4 @@ Feature: Add to car a Product
 
     Examples: 
       | product | numero | quantity |
-      | pc      |     13 |        1 |
+      | pc      |     12 |        1 |

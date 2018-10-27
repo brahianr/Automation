@@ -18,7 +18,8 @@ public class Select implements Task{
 	private WebDriver driver;
 	private int num;
 	private int quantity;
-	public String name;
+	public static String name;
+	ProductName product;
 	
 	public Select(Target target,int num,int quantity,WebDriver driver) {
 		this.target=target;
@@ -34,14 +35,7 @@ public class Select implements Task{
 		//llena la lista con los productos en pantalla
 		List<WebElementFacade> producto = target.resolveAllFor(actor); 
 		
-		
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		//almacenasr nombre de producto seleccionado para la futura comparacion
 		name=producto.get(num).getText();
 		
 		//selecciona el producto que este en la posicion que se mande
@@ -54,16 +48,13 @@ public class Select implements Task{
 		//abre la segunda ventana que se abrio
 		driver.switchTo().window(newTab.get(0));
 		
+		//presiona el boton aumentar cantidad el numero de veces que se diga 
 		for (int i=0;i<quantity;i++) {
 			actor.attemptsTo(Click.on(AlibabaProductPage.QUANTITY_BUTTON));
 		}		
 
 	}
 	
-	public String getName() {
-		return name;
-	}
-
 	public static Select product(Target target,int num,int quantity,WebDriver driver) {
 		return instrumented(Select.class,target,num,quantity,driver);
 	}

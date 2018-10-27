@@ -2,7 +2,6 @@ package com.alibaba.reto.questions;
 
 import java.util.List;
 import com.alibaba.reto.userinterfaces.AlibabaProductPage;
-import com.alibaba.reto.userinterfaces.AlibabaSearchResultPage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -12,11 +11,10 @@ public class AlibabaCheckProductOnCar implements Question<List<String>> {
 
 	@Override
 	public List<String> answeredBy(Actor actor) {
-		return Text.of(AlibabaSearchResultPage.CAR_PRODUCT).viewedBy(actor).asList();
+		return Text.of(AlibabaProductPage.PRODUCT_NAME).viewedBy(actor).asList();
 	}
 	
 	public static AlibabaCheckProductOnCar displayed() {
 		return new AlibabaCheckProductOnCar();
 	}
-
 }

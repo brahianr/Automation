@@ -19,6 +19,7 @@ public class Search implements Task{
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
+		//ingrea en la barra de busqueda el nombre del producto que se envie
 		actor.attemptsTo(Enter.theValue(product).into(AlibabaComponentsHomePage.SEARCH_BAR),
 				         Click.on(AlibabaComponentsHomePage.SEARCH_BUTTON));
 		

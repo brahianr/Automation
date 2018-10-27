@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class AlibabaSearchResultPage extends PageObject{
 	
+	//etiueta para seleecionar el nombre de todos los productos mostrados en la lista
 	public static final Target SELECT_PRODUCT=Target.the("Select product").located(By.xpath("//div[contains(@class,'')]//a[contains(@data-domdot,'id:2678')]"));
-	public static final Target CAR_PRODUCT=Target.the("Select product").located(By.xpath("//div[@class='name']/a/span"));
 
 }
