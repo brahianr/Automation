@@ -3,7 +3,7 @@ En este repositorio se encuentran diversos proyectos de automatizacion donde se 
 Selenium,
 Junit,
 Cucumber,
-serenity
+Serenity
 
 Usando diferentes patrones de diseño com:
 POM,
